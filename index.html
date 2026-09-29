@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Godara Music</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-image: linear-gradient(rgba(255,255,255,0.25), rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1600&q=80');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: background-color 0.5s ease;
+                padding-top: 50px;
+                min-height: 100vh;
+                margin: 0;
+            }
+
+            h3 {
+                color: #000000;
+                text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.7);
+            }
+
+            p {
+                color: #000000;
+                font-size: 18px;
+                text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+            }
+
+            .login-wrapper {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 30px 20px;
+            }
+
+            .login-card {
+                width: min(420px, 90vw);
+                background: rgba(255, 255, 255, 0.82);
+                backdrop-filter: blur(6px);
+                border-radius: 18px;
+                padding: 28px 24px;
+                box-shadow: 0 16px 35px rgba(0, 0, 0, 0.18);
+                border: 1px solid rgba(255, 255, 255, 0.45);
+            }
+
+            .logo-badge {
+                width: 62px;
+                height: 62px;
+                margin: 0 auto 12px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, #007bff, #6f42c1);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 24px;
+                font-weight: bold;
+                box-shadow: 0 8px 18px rgba(0, 123, 255, 0.25);
+            }
+
+            .login-card h3 {
+                margin: 0;
+                font-size: 30px;
+            }
+
+            .login-card p {
+                margin: 10px 0 22px;
+                font-size: 16px;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                gap: 8px;
+            }
+
+            label {
+                font-size: 14px;
+                font-weight: bold;
+                color: #222;
+            }
+
+            input {
+                padding: 12px 14px;
+                border: 1px solid #d1d5db;
+                border-radius: 10px;
+                font-size: 15px;
+                outline: none;
+                transition: border-color 0.2s ease;
+            }
+
+            input:focus {
+                border-color: #007bff;
+                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+            }
+
+            .checkbox-row {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 12px;
+                font-size: 14px;
+                color: #333;
+            }
+
+            .checkbox-row a {
+                color: #0d6efd;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            .primary-btn,
+            .secondary-btn {
+                border: none;
+                border-radius: 10px;
+                padding: 12px 18px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: all 0.2s ease;
+            }
+
+            .primary-btn {
+                background: linear-gradient(135deg, #007bff, #0056b3);
+                color: white;
+                font-weight: bold;
+            }
+
+            .primary-btn:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 10px 18px rgba(0, 123, 255, 0.25);
+            }
+
+            .secondary-btn {
+                background: linear-gradient(135deg, #6f42c1, #56359b);
+                color: white;
+                font-weight: bold;
+            }
+
+            .secondary-btn:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 10px 18px rgba(111, 66, 193, 0.25);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-wrapper">
+            <div class="login-card">
+                <div class="logo-badge">PG</div>
+                <h3>Pawan Godara</h3>
+                <p>Wel-Come to my profile</p>
+
+                <form>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" />
+                    </div>
+
+                    <div class="checkbox-row">
+                        <label><input type="checkbox" /> Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="primary-btn">Login</button>
+                    <button type="button" class="secondary-btn">New User</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                alert('Login clicked!');
+            });
+        </script>
+    </body>
+</html>
